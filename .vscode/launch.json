@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run AOI app (Streamlit)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "streamlit",
+      "args": ["run", "app_v2.py"],
+      "justMyCode": true
+    },
+    {
+      "name": "Detect on one image",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/boxes_demo.py",
+      "args": ["${input:image}", "out.jpg"]
+    }
+  ],
+  "inputs": [{ "id": "image", "type": "promptString", "description": "Path to a PCB photo" }]
+}
